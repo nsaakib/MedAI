@@ -14,9 +14,11 @@ Watch our 3-minute English demonstration showcasing Med.ai's AI-powered healthca
 
 
 
-\[▶ Watch the Official 3-Minute Demo](https://youtu.be/M9BDn0C7zi4)
+\[!\[Watch Med.ai Demo](https://img.youtube.com/vi/M9BDn0C7zi4/0.jpg)](https://youtu.be/M9BDn0C7zi4)
 
-## Run in VS Code (Windows)
+
+
+\*\*\[▶ Watch the Official 3-Minute Demo](https://youtu.be/M9BDn0C7zi4)\*\*Run in VS Code (Windows)
 
 1. Install Flutter stable and the VS Code Flutter extension. Run `flutter doctor` and complete the Android or web prerequisites.
 2. Extract this ZIP and open the `med\_ai\_flutter` folder in VS Code.

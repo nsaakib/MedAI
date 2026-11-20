@@ -1,12 +1,12 @@
-# Med.ai — Flutter UI prototype
+﻿# Med.ai â€” Flutter UI prototype
 
 A responsive Flutter implementation of the MedAI One interactive prototype, including the later price and budget screens. Light surfaces, navy text, blue/violet accents, mint states, generous spacing, and responsive sidebar/mobile navigation.
 
-\## 🎬 Project Demonstration
+## ðŸŽ¬ Project Demonstration
 
 
 
-\### Idea to Unicorn 2026 — Official Competition Demo
+### Idea to Unicorn 2026 â€” Official Competition Demo
 
 
 
@@ -14,11 +14,11 @@ Watch our 3-minute English demonstration showcasing Med.ai's AI-powered healthca
 
 
 
-\[!\[Watch Med.ai Demo](https://img.youtube.com/vi/M9BDn0C7zi4/hqdefault.jpg)](https://youtu.be/M9BDn0C7zi4)
+[![Watch Med.ai Demo](https://img.youtube.com/vi/M9BDn0C7zi4/hqdefault.jpg)](https://youtu.be/M9BDn0C7zi4)
 
 
 
-\*\*\[▶ Watch the Official 3-Minute Demo](https://youtu.be/M9BDn0C7zi4)\*\*
+**[â–¶ Watch the Official 3-Minute Demo](https://youtu.be/M9BDn0C7zi4)**
 
 
 
@@ -26,26 +26,27 @@ Watch our 3-minute English demonstration showcasing Med.ai's AI-powered healthca
 
 
 
-\## Run in VS Code (Windows)
+
+## Run in VS Code (Windows)
 
 
 
 1. Install Flutter stable and the VS Code Flutter extension. Run `flutter doctor` and complete the Android or web prerequisites.
-2. Extract this ZIP and open the `med\_ai\_flutter` folder in VS Code.
-3. Open **Terminal → New Terminal** in that folder.
+2. Extract this ZIP and open the `med_ai_flutter` folder in VS Code.
+3. Open **Terminal â†’ New Terminal** in that folder.
 4. Generate platform runners once. You can run the included `setup.ps1` script (Windows) or `bash setup.sh` (macOS/Linux), which protects the supplied source while generating runners. Alternatively, run:
 
 ```powershell
-flutter create --project-name med\_ai --platforms=android,ios,web .
+flutter create --project-name med_ai --platforms=android,ios,web .
 flutter pub get
 flutter analyze
 flutter test
 flutter run -d chrome
 ```
 
-Flutter creates the platform boilerplate around the supplied app source. It should retain existing files; keep your original ZIP as a backup. If a default counter test is generated, remove that generated test only; retain `budget\_test.dart` and `widget\_test.dart` from this package.
+Flutter creates the platform boilerplate around the supplied app source. It should retain existing files; keep your original ZIP as a backup. If a default counter test is generated, remove that generated test only; retain `budget_test.dart` and `widget_test.dart` from this package.
 
-For Android, start an emulator or connect a phone with USB debugging enabled, run `flutter devices`, then `flutter run -d DEVICE\_ID`. iOS requires macOS/Xcode.
+For Android, start an emulator or connect a phone with USB debugging enabled, run `flutter devices`, then `flutter run -d DEVICE_ID`. iOS requires macOS/Xcode.
 
 **No API key is needed for this prototype.** The Google Maps button launches a search externally; it does not call Places API or display live pharmacy data in the app.
 
@@ -60,7 +61,7 @@ After generating the iOS runner, add these entries inside the top-level `<dict>`
 <string>Select a prescription or medical report for preview.</string>
 ```
 
-This implementation only picks still images and does not require microphone permission. Android image\_picker uses the platform picker/camera; do not add broad storage permissions. Browser camera behavior depends on browser/device support; Choose image and Try a demo document are always the intended fallbacks.
+This implementation only picks still images and does not require microphone permission. Android image_picker uses the platform picker/camera; do not add broad storage permissions. Browser camera behavior depends on browser/device support; Choose image and Try a demo document are always the intended fallbacks.
 
 ## Included screens and behavior
 
@@ -80,18 +81,18 @@ This implementation only picks still images and does not require microphone perm
 
 |Item|Quantity|Unit price|Total|
 |-|-:|-:|-:|
-|Demo Medicine A|30|৳10|৳300|
-|Demo Medicine B|20|৳15|৳300|
-|Demo Medicine C|10|৳20|৳200|
+|Demo Medicine A|30|à§³10|à§³300|
+|Demo Medicine B|20|à§³15|à§³300|
+|Demo Medicine C|10|à§³20|à§³200|
 
-All medicines: ৳800 + ৳50 delivery = ৳850.
-Default budget: ৳650. A and B selected: ৳600 + ৳50 = ৳650. C is Not Included. Remaining budget: ৳0.
+All medicines: à§³800 + à§³50 delivery = à§³850.
+Default budget: à§³650. A and B selected: à§³600 + à§³50 = à§³650. C is Not Included. Remaining budget: à§³0.
 
-`Affordable individually` means `min(prescribed quantity, floor(max(0, budget − delivery) / unit price))`. Each line independently uses the entire budget; these quantities are not a jointly optimized basket and are not dose recommendations. Selection includes/excludes whole prescribed quantities. An empty basket has no delivery fee. No clinical priority or automatic dose rationing is implemented.
+`Affordable individually` means `min(prescribed quantity, floor(max(0, budget âˆ’ delivery) / unit price))`. Each line independently uses the entire budget; these quantities are not a jointly optimized basket and are not dose recommendations. Selection includes/excludes whole prescribed quantities. An empty basket has no delivery fee. No clinical priority or automatic dose rationing is implemented.
 
 ## What is real and what is demo
 
-**Real local behavior:** navigation, image selection/capture via image\_picker, preview, form validation/editing, review flags, arithmetic, basket selections, preference/taken toggles, session state, message entry, external map search.
+**Real local behavior:** navigation, image selection/capture via image_picker, preview, form validation/editing, review flags, arithmetic, basket selections, preference/taken toggles, session state, message entry, external map search.
 
 **Demo:** OCR/AI extraction (fixed sample values regardless of image), medicine names/prices, laboratory values, pharmacy cards/distances/map, health readings, chat replies, reminders, device connections, records/profile. No order, payment, notifications, diagnosis, authentication, cloud upload or stock lookup occurs. State is in memory only and resets on restart. Photo bytes remain in app memory and are not sent to an AI service.
 
@@ -104,8 +105,8 @@ Default budget: ৳650. A and B selected: ৳600 + ৳50 = ৳650. C is Not Incl
 * `lib/screens/scan.dart`: document/photo and review flow.
 * `lib/screens/medicines.dart`: editor, price summary, budget calculator.
 * `lib/screens/other.dart`: pharmacy map illustration, health, chat, care, records, settings.
-* `test/budget\_test.dart`: budget, delivery, quantity bounds, price-edit regression tests.
-* `test/widget\_test.dart`: responsive dashboard and budget input tests.
+* `test/budget_test.dart`: budget, delivery, quantity bounds, price-edit regression tests.
+* `test/widget_test.dart`: responsive dashboard and budget input tests.
 
 ## Connect production services later
 
@@ -121,6 +122,7 @@ See `VALIDATION.md` for what was checked in the build environment. Run the Flutt
 
 * https://docs.flutter.dev/reference/create-new-app
 * https://docs.flutter.dev/cookbook/design/themes
-* https://pub.dev/packages/image\_picker
-* https://pub.dev/packages/url\_launcher
+* https://pub.dev/packages/image_picker
+* https://pub.dev/packages/url_launcher
+
 

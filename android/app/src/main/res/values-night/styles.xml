@@ -1,0 +1,8 @@
+<resources>
+  <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+    <item name="android:windowBackground">@drawable/medai_brand_launch</item>
+  </style>
+  <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+    <item name="android:windowBackground">#001631</item>
+  </style>
+</resources>

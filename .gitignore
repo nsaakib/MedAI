@@ -1,0 +1,103 @@
+.dart_tool/
+.packages
+build/
+.flutter-plugins*
+android/local.properties
+*.iml
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+key.properties
+credentials.json
+secrets.json
+service-account*.json
+
+# Python virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# AI models and checkpoints
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.pkl
+checkpoints/
+model_weights/
+.cache/
+
+# Private databases
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# Patient data and uploaded documents
+uploads/
+patient_data/
+patient_reports/
+medical_reports/
+prescriptions/
+private_data/
+
+# Generated files
+*.apk
+*.aab
+*.zip
+*.log
+*.mp4
+*.wav
+*.mp3
+logs/
+temp/
+tmp/
+dist/
+node_modules/
+
+# IDE and operating system files
+.idea/
+.DS_Store
+Thumbs.db
+
+
+# Memory dumps and crash reports
+*.hprof
+*.dmp
+hs_err_pid*
+
+# Local project backups
+.medai_ocr_pilot_backup/
+*.bak
+
+# Release artifacts
+release-output/
+
+# Local backend data and runtime files
+/backend/data/
+
+# Office temporary files
+~$*
+
+# Additional generated files
+android/.gradle/
+android/.kotlin/
+coverage/
+*.tflite
+*.gguf
+*.bin
+*.joblib
+

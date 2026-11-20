@@ -1,0 +1,40 @@
+name: med_ai
+description: Med.ai connected patient records and care review application.
+publish_to: none
+version: 1.2.0+5
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+  flutter: '>=3.35.0'
+dependencies:
+  flutter_localizations:
+    sdk: flutter
+  file_selector: ^1.1.0
+  pdfx: ^2.11.0
+  flutter:
+    sdk: flutter
+  image_picker: ^1.1.2
+  url_launcher: ^6.3.1
+  http: ^1.3.0
+  flutter_secure_storage: ^9.2.4
+  path_provider: ^2.1.5
+  cryptography: ^2.7.0
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.0
+  webview_flutter: ^4.13.0
+  geolocator: ^14.0.2
+  flutter_map: ^8.2.2
+  latlong2: ^0.9.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/Inter.ttf
+    - family: NotoSansBengali
+      fonts:
+        - asset: assets/NotoSansBengali.ttf

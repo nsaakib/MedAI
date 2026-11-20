@@ -1,0 +1,8 @@
+<resources>
+  <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+    <item name="android:windowBackground">@drawable/medai_brand_launch</item>
+    <item name="android:windowSplashScreenBackground">#001631</item>
+    <item name="android:windowSplashScreenAnimatedIcon">@drawable/medai_splash_modern</item>
+    <item name="android:windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+  </style>
+</resources>

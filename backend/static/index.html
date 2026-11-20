@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Med.ai Care Team</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<header><div class="brand">✚ Med.ai <span>Care Team</span></div><button id="logout" hidden>Sign out</button></header>
+<main>
+<section id="login"><h1>Care that stays connected.</h1><p>Sign in with a clinician account provisioned by your administrator.</p><form id="loginForm"><label>Email<input name="email" type="email" required autocomplete="username"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button>Sign in</button></form></section>
+<p id="error" role="alert"></p>
+<section id="workspace" hidden>
+<nav class="tabs"><button id="showCases">Patient reviews</button><button id="showKnowledge">Reference library</button></nav>
+<div id="caseWorkspace"><div class="top"><div><h1>Review workspace</h1><p>Patient-consented cases, documents, and follow-up notes.</p></div><button id="refresh">Refresh</button></div><div id="metrics"></div><div class="layout"><aside><h2>Review queue</h2><div id="queue"></div></aside><article id="detail"><p>Select a case to review.</p></article></div><details><summary>Audit history</summary><pre id="audit"></pre></details></div>
+<section id="knowledgeWorkspace" hidden>
+<div class="top"><div><h1>Reviewed reference library</h1><p>Publish source text with traceable citations. No clinical answers are generated.</p></div><button id="refreshKnowledge">Refresh sources</button></div>
+<div class="layout knowledge-layout"><aside><h2>Source history</h2><button id="newReference">New reference</button><div id="references"></div></aside><article>
+<section id="referenceEditor"><h2>Submit a source for review</h2><p>Never enter patient records or identifiers here. Use only reference content you have permission to reuse. A different clinician must approve its accuracy, audience, jurisdiction and rights before patients can read it.</p>
+<form id="referenceForm"><input name="replaces_id" type="hidden"><label>Title<input name="title" required minlength="3" maxlength="200"></label><label>Publisher<input name="publisher" required minlength="2" maxlength="160"></label><label>Original source URL<input name="source_url" type="url" required placeholder="https://…" maxlength="2000"></label><label>Source edition / version<input name="source_version" required maxlength="100"></label><label>Language<select name="language"><option value="en">English</option><option value="bn">Bengali</option></select></label><label>Intended audience<input name="audience" required minlength="3" maxlength="300" placeholder="Population and reading audience"></label><label>Jurisdiction / applicability<input name="jurisdiction" required minlength="2" maxlength="100"></label><label>Topics (comma-separated, up to 12)<input name="topics" maxlength="972"></label><label>Reuse permission / license basis<textarea name="rights_basis" required minlength="10" maxlength="1000" rows="3"></textarea></label><label>Exact source text<textarea name="content" required minlength="40" maxlength="30000" rows="12"></textarea></label><p id="revisionNotice"></p><button>Create review draft</button></form></section>
+<section id="referenceDetail" hidden></section>
+</article></div>
+</section>
+</section>
+</main><script src="/static/app.js" defer></script><script src="/static/knowledge.js" defer></script></body></html>

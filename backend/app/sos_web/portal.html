@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Med.ai · Ambulance dispatch</title>
+<link rel="stylesheet" href="/sos/portal.css">
+<script src="/sos/portal.js" defer></script>
+</head>
+<body>
+<header><div><span class="brand">Med.ai / Partner operations</span><h1>Ambulance dispatch</h1></div><a id="live-call" class="call" href="tel:999">Call 999</a></header>
+<main>
+<p class="banner" id="notice" role="status">Sign in with your verified Med.ai dispatch account.</p>
+<form id="login" class="card">
+<h2>Staff and driver sign-in</h2>
+<p class="muted">Use your partner or driver account to open your assigned workspace.</p>
+<label>Email<input name="email" type="email" autocomplete="username" required></label>
+<label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+<button>Sign in</button>
+<button type="button" id="open-signup" class="ghost">Sign up</button>
+</form>
+<form id="signup" class="card" hidden>
+<h2>Register a partner organization</h2>
+<p id="signup-help">An administrator must verify the organization before dispatch access is granted.</p>
+<label>Full name<input name="name" autocomplete="name" required minlength="2" maxlength="120"></label>
+<label class="new-account">Email<input name="email" type="email" autocomplete="username" required></label>
+<label class="new-account">Password (10 characters or more)<input name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="256"></label>
+<label>Organization name<input name="organization" required minlength="2" maxlength="120"></label>
+<label>Dispatch address<input name="address" required minlength="4" maxlength="220"></label>
+<label>Operations phone<input name="phone" type="tel" required maxlength="20"></label>
+<label>Latitude<input name="lat" type="number" step="any" min="-90" max="90" required></label>
+<label>Longitude<input name="lng" type="number" step="any" min="-180" max="180" required></label>
+<button type="submit">Submit registration</button>
+<button type="button" id="back-login" class="ghost">Back to sign in</button>
+</form>
+<section class="card" id="driver-created" hidden>
+<h2>Sandbox driver account</h2>
+<p>Copy these one-time test credentials and use them in a separate tab or window. Keep this operator tab open. The test vehicle is already marked available.</p>
+<pre id="driver-credentials"></pre>
+</section>
+
+<section id="workspace" hidden>
+<div class="toolbar"><label>Organization and role<select id="role"></select></label>
+<button id="refresh">Refresh</button><button id="logout" class="ghost">Sign out</button></div>
+<h2 class="section-title">Dispatch workspace</h2>
+<p class="muted">Use the role switcher to view requests or driver assignments. Status updates appear here automatically.</p>
+<div id="active"></div>
+</section>
+</main>
+</body>
+</html>
